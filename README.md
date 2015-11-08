@@ -17,7 +17,7 @@ a function of C allocation and turnover rates. N uptake is represented as a satu
 GRAM is deterministic, in common with other models examining grassland community dynamics (Parton et al.1994; Cannell and Thornely 1998). GRAM has twelve parameters that represent plant traits. In GRAM, a species is characterized as a vector of values for these plant trait parameters. Thus, growth rate of a range of different species can be simulated by varying the input parameters to GRAM.
 
 
-Key References
+Key References:
 
 Ali, A. A., B. E. Medlyn, K. Y. Crous, and P. B. Reich. 2013. A trait-based ecosystem model suggests that long-term responsiveness to rising atmospheric CO2 concentration is greater in slow-growing than fast growing species. Functional Ecology 27:1011-1022.
 
