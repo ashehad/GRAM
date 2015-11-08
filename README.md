@@ -1,4 +1,4 @@
-# GRAM
+# Summary
 GRAM is a trait-based grassland plant production model, that was fully described in Ali et al. (2013, 2015). The model  simulates 
 plant nitrogen  (N) and carbon  (C) dynamics using a set of difference equations. The processes simulated include 
 photosynthesis, respiration, carbon  and  nitrogen  allocation,  turnover,  and  nitrogen uptake. 
