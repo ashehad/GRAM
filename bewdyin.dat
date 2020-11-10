@@ -1,0 +1,128 @@
+BEWDY	FILE	FOR	BIOCON	YEARS	98-03	Control	Treatment	GROW							
+
+
+Use	small	values	(1	kg	m-2)	for	initial	root	and	shoot	pools.	Take	average  leaf N.
+&PLANTDATA															
+INITROOTa	=	0.01	
+INITROOTFR = 0.005
+INITROOTCR = 0.005												
+INITSHOOT	=	0.01							
+INITTOTLEAFNA = 0.73
+INITLAIMAXFIRSTA = 0.9
+/															
+
+BIOCON	parameters	from	GDAY												
+&GROWPARS															
+SLAA = 5.6
+CFRAC	=	0.44													
+FDECAY	=	1													
+RDECAYA = 0.75
+ALLEAFA = 0.4
+ALROOTA = 0.6
+ALROOTCr	=     0.2
+ALROOTFr	=     0.8																																														
+RESPFRAC	=	0.5
+RESPFRACG   =     0.5																																																
+/																																																		
+																																																		
+&ALLLAREA																																																		
+NODATES	=	24																																																
+VALUES	=																																																	
+0   2.14	2.14	 0    0   2.14	2.14	 0    0   2.14	2.14	 0
+0   2.14	2.14	 0    0   2.14	2.14	 0    0   2.14	2.14	 0																																										
+DATES	=																																																	
+'30/04/98'	'15/05/98'	'01/07/98'	'15/07/98' '30/04/99'	'15/05/99'	'01/07/99'	'15/07/99' '30/04/00'	'15/05/00'	'01/07/00'	'15/07/00'
+'30/04/01'	'15/05/01'	'01/07/01'	'15/07/01' '30/04/02'	'15/05/02'	'01/07/02'	'15/07/02' '30/04/03'	'15/05/03'	'01/07/03'	'15/07/03' 
+/																			
+
+Foliage	N	is	expressed	in	g	N	m-2	leaf.	Converted	from	%N	(measured)	using	a	constant	SLA	of	15	m2/kg.
+&ALLFOLN																			
+NODATES	=	16																	
+VALUES	=																		
+0.869	0.869	1.014	1.014	0.828	0.828														
+1.004	1.004	0.98	0.98	0.945	0.945
+0.838 0.838 0.95  0.95														
+DATES	=																		
+'01/01/98'	'31/12/98'	'01/01/99'	'31/12/99'	'01/01/00'	'31/12/00'														
+'01/01/01'	'31/12/01'	'01/01/02'	'31/12/02'	'01/01/03'	'31/12/03'
+'01/01/04'	'31/12/04'  '01/01/05'	'31/12/05'														
+/																			
+
+Leaf	incidence	angle.	From	transmission	"data,"	extinction	coefficient	averages	0.65.	Put	0.5	for	now						
+&LIA																			
+NALPHA	=	1																	
+ELP	=	1											
+/													
+
+Values	for	T	response	of	Jmax	from	Bray	files.	Alpha	set	to	max	value.
+&JMAXPARS													
+AJQ	=	0.38											
+EAVJ	=	38670											
+EDVJ	=	200000											
+DELSJ	=	638.1											
+IECO	=	1											
+/													
+
+Values	for	T	response	of	Vcmax	from	Bray	files.					
+&VCMAXPARS													
+EAVC	=	58520											
+TVJUP	=	10											
+TVJDN	=	0													
+/															
+
+Parameters	of	relationships	of	"Jmax,"	Vcmax	and	N	from	Ellsworth.	What	value	to	use	for	absorptance?
+&BEWDYPARS															
+JMAXN25A = 97.0
+VCMAXN25A = 52.0
+JMAXINT = 0
+VCMAXINT = 0
+ABSRP	= 0.82		
+KEXT = 0.6
+/															
+
+Stomatal	conductance	parameter	-	any	ideas???	Try	Ci:Ca	ratio?							
+&BBGS
+G0 = 0.0															
+G1A = 4.8
+/															
+
+Respiration	values	from	Tjoelker 2005 New Phytol for C3 spp	
+&RDPARS
+RD0	=	1.216		
+RDFR  =     11.4
+RDCR  =     5.7		
+RDK	=	0.0793				
+RDT	=	25				
+EFFY	=	0.25				
+SLAA = 5.6
+/
+
+day1 = '30/04/03'
+day2 = '15/05/03'
+day3 = '01/07/03' 
+day4 = '15/07/03'
+
+&Bewdysolve
+SCR = 0.001314
+SFR = 0.001314
+Crfratio =  1.943
+Frfratio = 	1.447
+dayonea = 125
+daytwoa = 176
+daythreea = 213
+dayfoura = 243
+/
+
+&NitrogenuptakeX
+Kr = 114
+Nmineral = 3
+rho = 0.7
+/
+&Nitrogenuptake
+KRA = 0.0239
+NMINERALA = 3
+RHOA = 0.6
+KONE = 43
+KTWO = 50
+FNRETA = 0.5
+/			

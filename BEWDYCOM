@@ -1,0 +1,6 @@
+C Names of constants
+
+C Conversion factors
+      PARAMETER (X_M2_AS_HA = 1E-4)         ! Converst m2 to hectares
+      PARAMETER (X_KG_AS_T = 1E-3)			! Converts kg to tonnes
+      PARAMETER (X_DAYS_AS_YRS = 1/365.25)  ! Converts days to years
